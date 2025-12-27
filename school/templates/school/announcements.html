@@ -1,0 +1,21 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<h2>School Announcements</h2>
+
+{% if announcements %}
+    <ul>
+        {% for announcement in announcements %}
+            <li>
+                <strong>{{ announcement.title }}</strong><br>
+                {{ announcement.message }}<br>
+                <small>{{ announcement.date_posted }}</small>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No announcements available.</p>
+{% endif %}
+
+{% endblock %}

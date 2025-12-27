@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Thuto Thebe Secondary School{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'school/style.css' %}">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-area">
+        <img src="{% static 'school/logo.png' %}" alt="School Logo">
+        <div>
+            <h1>Thuto Thebe Secondary School</h1>
+            <p>Standerton, Mpumalanga</p>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/academics/">Academics</a>
+        <a href="/staff/">Staff</a>
+        <a href="/sports/">Sports</a>
+        <a href="/announcements/">News</a>
+    <!-- ADD THIS -->
+        <a href="/contact/">Contact</a>
+        <a href="{% url 'application' %}">Apply</a>
+        
+    </nav>
+</header>
+
+<main class="content">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <p>
+        📍 607 Azalea Ext 1, Standerton |
+        ☎ 017 712 4704 |
+        📧 mbulimazwi6@gmail.com
+    </p>
+</footer>
+
+</body>
+</html>

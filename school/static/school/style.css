@@ -1,0 +1,103 @@
+:root {
+    --blue: #0B2C5F;
+    --gold: #F2B705;
+    --green: #2E7D32;
+    --white: #ffffff;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+/* HEADER */
+.header {
+    background-color: var(--blue);
+    padding: 15px;
+    color: var(--white);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+/* NAVIGATION */
+.nav {
+    margin-top: 10px;
+}
+
+.nav a {
+    color: var(--gold);
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--blue);
+    color: var(--gold);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ANNOUNCEMENTS */
+.announcements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.announcement-card {
+    background: #ffffff;
+    border-left: 6px solid #0a3d91; /* school blue */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+}
+
+.announcement-card h4 {
+    margin-top: 0;
+    color: #0a3d91;
+}
+
+.announcement-card small {
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #d4a017; /* gold */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}

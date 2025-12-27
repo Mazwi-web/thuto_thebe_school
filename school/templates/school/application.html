@@ -1,0 +1,65 @@
+{% extends 'school/base.html' %}
+{% block content %}
+
+<h2>Online Application Form</h2>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <input name="learner_name" placeholder="Learner Name" required>
+  <input name="learner_surname" placeholder="Learner Surname" required>
+  <input name="age" type="number" placeholder="Age" required>
+  <input name="id_number" placeholder="ID Number" required>
+
+  <input name="parent_name" placeholder="Parent Name & Surname" required>
+  <input name="parent_email" type="email" placeholder="Parent Email" required>
+  <input name="parent_contact" placeholder="Parent Contact" required>
+
+  <input name="learner_contact" placeholder="Learner Contact" required>
+
+  <textarea name="home_address" placeholder="Home Address" required></textarea>
+  <input name="province" placeholder="Province" required>
+  <input name="previous_school" placeholder="Previous School" required>
+  <input name="career" placeholder="Career Choice" required>
+
+  <textarea name="motivation" placeholder="Why do you want to study at Thuto Thebe?" required></textarea>
+
+  <input name="learner_signature" placeholder="Learner Signature (Full Name)" required>
+  <input name="parent_signature" placeholder="Parent Signature (Full Name)" required>
+
+  <div>
+    <label>ID Document (PDF or Image)</label><br>
+    <input type="file" name="id_document" required>
+</div>
+
+<br>
+
+<div>
+    <label>Learner Signature</label><br>
+    <input type="file" name="learner_signature" required>
+</div>
+
+<br>
+
+<div>
+    <label>Parent Signature</label><br>
+    <input type="file" name="parent_signature" required>
+</div>
+
+<br>
+
+  <button type="submit">Submit Application</button>
+
+</form>
+
+<script>
+document.getElementById("applicationForm").addEventListener("submit", function(e) {
+    const age = document.querySelector("input[name='age']").value;
+    if (age < 12) {
+        alert("Learner must be 12 years or older.");
+        e.preventDefault();
+    }
+});
+</script>
+
+{% endblock %}
