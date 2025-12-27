@@ -102,79 +102,91 @@ body {
     text-decoration: underline;
 }
 
-/* =========================
-   MOBILE RESPONSIVE STYLES
-   ========================= */
+/* ===============================
+   MOBILE-FIRST IMPROVEMENTS
+   =============================== */
 
-/* Base font size for whole site */
-html {
-    font-size: 16px;
-}
-
-/* Improve readability on mobile */
+/* Base typography */
 body {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #222;
 }
 
 /* Headings */
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 h3 {
-    font-size: 1.3rem;
-}
-
-/* Navigation links */
-nav a {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 /* Paragraphs */
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-/* Footer text */
+/* ===============================
+   NAVIGATION (MOBILE)
+   =============================== */
+nav {
+    padding: 12px 10px;
+}
+
+nav a {
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 10px 8px;
+    display: inline-block;
+}
+
+/* ===============================
+   CONTENT SPACING
+   =============================== */
+.container,
+.content,
+.main-content {
+    padding: 20px 16px;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
 footer {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding: 15px;
 }
 
-/* =========================
-   SMALL SCREENS (PHONES)
-   ========================= */
-@media (max-width: 768px) {
+/* ===============================
+   EXTRA BOOST FOR SMALL PHONES
+   =============================== */
+@media (max-width: 480px) {
 
-    html {
-        font-size: 18px; /* ⬅ increases everything */
+    body {
+        font-size: 19px;
     }
 
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
 
     h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
+        font-size: 1.9rem;
     }
 
     nav a {
         font-size: 1.2rem;
-        padding: 10px;
-        display: inline-block;
-    }
-
-    .container,
-    .content,
-    .main-content {
-        padding: 15px;
     }
 }
