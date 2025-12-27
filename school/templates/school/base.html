@@ -17,17 +17,22 @@
         </div>
     </div>
 
-    <nav class="nav">
+   <nav class="navbar">
+    <div class="nav-header">
+        <span class="school-name">Thuto Thebe Secondary School</span>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div class="nav-links" id="navLinks">
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/academics/">Academics</a>
         <a href="/staff/">Staff</a>
         <a href="/sports/">Sports</a>
-        <a href="/announcements/">News</a>
-    <!-- ADD THIS -->
+        <a href="/news/">News</a>
         <a href="/contact/">Contact</a>
-        <a href="{% url 'application' %}">Apply</a>
-        
+        <a href="/apply/">Apply</a>
+    </div>
     </nav>
 </header>
 
@@ -42,6 +47,11 @@
         📧 mbulimazwi6@gmail.com
     </p>
 </footer>
-
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+}
+</script>
 </body>
 </html>
