@@ -101,3 +101,80 @@ body {
 .read-more:hover {
     text-decoration: underline;
 }
+
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
+
+/* Base font size for whole site */
+html {
+    font-size: 16px;
+}
+
+/* Improve readability on mobile */
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+/* Navigation links */
+nav a {
+    font-size: 1.1rem;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+}
+
+/* Footer text */
+footer {
+    font-size: 0.95rem;
+}
+
+/* =========================
+   SMALL SCREENS (PHONES)
+   ========================= */
+@media (max-width: 768px) {
+
+    html {
+        font-size: 18px; /* ⬅ increases everything */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .container,
+    .content,
+    .main-content {
+        padding: 15px;
+    }
+}
