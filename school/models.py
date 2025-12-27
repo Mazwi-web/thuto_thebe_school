@@ -53,6 +53,7 @@ class Application(models.Model):
     parent_contact = models.CharField(max_length=20)
 
     learner_contact = models.CharField(max_length=20)
+    home_address = models.TextField(blank=True,null=True)
 
     address = models.TextField(blank=True, null=True)
     province = models.CharField(max_length=50, blank=True, null=True)
