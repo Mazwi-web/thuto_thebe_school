@@ -278,13 +278,33 @@ i, .icon {
 /* Mobile-specific icon styling */
 @media (max-width: 768px) {
 
-    i, .icon {
-        font-size: 32px;
-        margin: 0 18px;
+    /* Footer container */
+    .footer {
+        font-size: 18px;
+        padding: 20px 10px;
+        text-align: center;
+        line-height: 1.8;
     }
 
-    .footer i {
-        font-size: 36px;
-        margin: 0 22px;
+    /* Make emojis (icons) bigger */
+    .footer span,
+    .footer p {
+        font-size: 20px;
     }
+
+    /* Space icons from text */
+    .footer {
+        letter-spacing: 0.5px;
+    }
+
+    /* Stack footer items vertically */
+    .footer p {
+        display: block;
+        margin: 12px 0;
+    }
+}
+
+.icon {
+    font-size: 28px;
+    margin-right: 12px;
 }
