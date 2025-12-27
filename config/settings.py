@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^l6*+wi3x$muae*b+fwkm&gaz)7z_jw9b_v#lca%w3c30td#04'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["thuto-thebe-school.onrender.com",".onrender.com",]
+ALLOWED_HOSTS = ["thuto-thebe-school.onrender.com",".onrender.com","localhost","127.0.0.1",]
 
 
 # Application definition
