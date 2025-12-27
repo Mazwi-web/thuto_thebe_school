@@ -258,3 +258,33 @@ footer {
         padding: 0;
     }
 }
+
+/* =========================
+   ICON SIZE & SPACING
+   ========================= */
+
+/* General icons */
+i, .icon {
+    font-size: 28px;
+    margin: 0 12px;
+}
+
+/* Footer icons */
+.footer i {
+    font-size: 30px;
+    margin: 0 16px;
+}
+
+/* Mobile-specific icon styling */
+@media (max-width: 768px) {
+
+    i, .icon {
+        font-size: 32px;
+        margin: 0 18px;
+    }
+
+    .footer i {
+        font-size: 36px;
+        margin: 0 22px;
+    }
+}
