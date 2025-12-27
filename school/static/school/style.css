@@ -308,3 +308,33 @@ i, .icon {
     font-size: 28px;
     margin-right: 12px;
 }
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 56px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    text-decoration: none;
+}
+
+/* Bigger on mobile */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 64px;
+        height: 64px;
+        font-size: 32px;
+        line-height: 64px;
+        bottom: 25px;
+        right: 15px;
+    }
+}
