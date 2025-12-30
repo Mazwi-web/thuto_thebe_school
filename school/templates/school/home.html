@@ -51,3 +51,21 @@ We accommodate <strong>1090 learners</strong> and have <strong>33 staff members<
 {% endif %}
 
 {% endblock %}
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, 4000);
+</script>
+
+{% load static %}
+
+<div class="slider">
+    <img src="{% static 'school/images/slide1.jpg' %}" class="slide active">
+    <img src="{% static 'school/images/slide2.jpg' %}" class="slide">
+    <img src="{% static 'school/images/slide3.jpg' %}" class="slide">
+</div>
