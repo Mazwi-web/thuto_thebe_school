@@ -58,5 +58,24 @@ function toggleMenu() {
    aria-label="Chat on WhatsApp">
     💬
 </a>
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slider img");
+    let index = 0;
+
+    // hide all except first
+    slides.forEach((img, i) => {
+        img.style.display = i === 0 ? "block" : "none";
+    });
+
+    setInterval(() => {
+        slides[index].style.display = "none";
+        index = (index + 1) % slides.length;
+        slides[index].style.display = "block";
+    }, 3000);
+});
+</script>
+{% endblock%}
 </body>
 </html>
